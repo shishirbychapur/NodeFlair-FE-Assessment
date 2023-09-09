@@ -1,5 +1,3 @@
-import './App.css';
-
 import Listings from './components/Listings';
 import React from 'react';
 import Selected from './components/Selected';
