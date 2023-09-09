@@ -6,8 +6,8 @@ export default function Selected() {
   const { selected } = React.useContext(SelectedContext);
 
   return (
-    <div className="sm:border border-solid border-gray-700 w-2/4 h-screen mt-4 p-2">
-      <p className="font-semibold text-xl">{selected.name}</p>
+    <div className="hidden lg:inline lg:border lg:border-solid lg:border-gray-700 lg:w-2/4 lg:h-screen lg:my-2 lg:p-2 lg:bg-white">
+      <p className="hidden lg:inline lg:font-semibold lg:text-xl">{selected.name}</p>
     </div>
   );
 }

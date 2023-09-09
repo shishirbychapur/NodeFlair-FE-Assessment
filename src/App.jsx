@@ -10,7 +10,7 @@ function App() {
 
   return (
     <>
-      <div className="flex justify-evenly items-center h-screen">
+      <div className="flex justify-evenly h-screen bg-light-gray-100">
         <SelectedContext.Provider value={{ selected, setSelected }}>
           <Listings />
           <Selected />
