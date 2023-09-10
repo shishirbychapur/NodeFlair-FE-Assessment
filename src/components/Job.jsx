@@ -68,20 +68,22 @@ export default function Job(props) {
   return (
     <div className={containerClass} onClick={selectJob}>
       <div className="flex flex-row justify-between text-left">
-        <div className="flex flex-row justify-start">
-          <img src={props.data.logo} alt="logo" className="sm:w-10 md:w-12 lg:w-14 sm:h-10 md:h-12 lg:h-14 h-10 mt-2 mr-2" />
+        <div className="flex flex-col md:flex-row justify-start">
+          <img src={props.data.logo} alt="logo" className="w-10 md:w-12 lg:w-14 sm:h-10 md:h-12 lg:h-14 h-10 mt-2 mr-2" />
           <div className="w-11/12 lg:w-9/12">
-            <div className="flex xs:flex-col flex-row justify-between">
+            <div className="flex flex-row justify-between">
               <div className="flex flex-row text-sm">
                 <p className="mr-2 max-w-40">{props.data.company}</p>
                 <p>{props.data.rating} ★</p>
               </div>
             </div>
             <p className="max-w-lg font-open-sans font-bold mt-1 line-clamp-2">{props.data.name}</p>
-            <div className="flex flex-row">
+            <div className="flex flex-col sm:flex-row">
               <p className="font-semibold text-dark-green mr-2">{props.data.date}</p>
-              <img className="w-auto h-4 mt-0.5 ml-0.5" src={location} alt="location" />
-              <p className="ml-0.5 lg:ml-1.5 xs:ml-1 text-dark-gray text-sm">{props.data.location}</p>
+              <div className="flex flex-row">
+                <img className="w-auto h-4 mt-0.5 ml-0.5" src={location} alt="location" />
+                <p className="ml-0.5 lg:ml-1.5 xs:ml-1 text-dark-gray text-sm">{props.data.location}</p>
+              </div>
             </div>
             <div className="max-w-lg mt-1">
               <p className="text-sm font-medium">
